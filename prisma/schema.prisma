@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id         String    @id @default(uuid())
+  name       String
+  email      String
+  password   String
+  classes    Class[]
+  is_teacher Boolean?  @default(false)
+  created_dt DateTime? @default(now())
+  updated_dt DateTime? @default(now())
+
+  @@map("users")
+}
+
+model Class {
+  id         String    @id @default(uuid())
+  name       String
+  discipline String
+  matter     String
+  user_id    String
+  posts      Post[]
+  files      File[]
+  videos     Video[]
+  created_dt DateTime? @default(now())
+  updated_dt DateTime? @default(now())
+
+  user User @relation(fields: [user_id], references: [id])
+
+  @@map("classes")
+}
+
+model Post {
+  id          String    @id @default(uuid())
+  title       String
+  description String
+  class_id    String
+  created_dt  DateTime? @default(now())
+  updated_dt  DateTime? @default(now())
+
+  class Class @relation(fields: [class_id], references: [id])
+
+  @@map("posts")
+}
+
+model File {
+  id          String    @id @default(uuid())
+  name        String
+  link        String
+  description String?
+  class_id    String
+  created_dt  DateTime? @default(now())
+  updated_dt  DateTime? @default(now())
+
+  class Class @relation(fields: [class_id], references: [id])
+
+  @@map("files")
+}
+
+model Video {
+  id          String    @id @default(uuid())
+  name        String
+  link        String
+  description String?
+  class_id    String
+  created_dt  DateTime? @default(now())
+  updated_dt  DateTime? @default(now())
+
+  class Class @relation(fields: [class_id], references: [id])
+
+  @@map("videos")
+}

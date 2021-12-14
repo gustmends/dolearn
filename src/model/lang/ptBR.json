@@ -1,0 +1,106 @@
+{
+    "user_invalid_email": {
+        "message": "O email inserido não é valido.",
+        "status": 400
+    },
+    "user_already_registered": {
+        "message": "Um usuario ja foi cadastrado com este email.",
+        "status": 400
+    },
+    "user_invalid_name": {
+        "message": "O nome inserido não é valido.",
+        "status": 400
+    },
+    "user_invalid_password": {
+        "message": "A senha inserida não é valida.",
+        "status": 400
+    },
+    "user_not_found": {
+        "message": "Nenhum usuario foi encontrado com estas credenciais.",
+        "status": 400
+    },
+    "user_not_authenticated": {
+        "message": "O token de autenticação informado não é valido.",
+        "status": 401
+    },
+    "user_not_teacher": {
+        "message": "O usuario não é um professor.",
+        "status": 401
+    },
+    "class_invalid_name": {
+        "message": "O nome da sala inserida não é valida.",
+        "status": 400
+    },
+    "class_invalid_discipline": {
+        "message": "O nome da disciplina inserida não é valida.",
+        "status": 400
+    },
+    "class_invalid_matter": {
+        "message": "O nome da materia inserida não é valida.",
+        "status": 400
+    },
+    "class_not_found": {
+        "message": "Nenhuma sala com este id foi encontrada.",
+        "status": 404
+    },
+    "class_permission_denied": {
+        "message": "O usuario não tem permissão para alterar a sala.",
+        "status": 401
+    },
+    "file_invalid_name": {
+        "message": "O nome do arquivo inserido não é valido.",
+        "status": 400
+    },
+    "file_invalid_link": {
+        "message": "O link do arquivo inserido não é valido.",
+        "status": 400
+    },
+    "file_invalid_description": {
+        "message": "A descrição do arquivo inserido não é valido.",
+        "status": 400
+    },
+    "file_not_found": {
+        "message": "Nenhum arquivo com este id foi encontrado.",
+        "status": 404
+    },
+    "file_permission_denied": {
+        "message": "O usuario não tem permissão para alterar o arquivo.",
+        "status": 401
+    },
+    "video_invalid_name": {
+        "message": "O nome do video inserido não é valido.",
+        "status": 400
+    },
+    "video_invalid_link": {
+        "message": "O link do video inserido não é valido.",
+        "status": 400
+    },
+    "video_invalid_description": {
+        "message": "A descrição do video inserido não é valido.",
+        "status": 400
+    },
+    "video_not_found": {
+        "message": "Nenhum video com este id foi encontrado.",
+        "status": 404
+    },
+    "video_permission_denied": {
+        "message": "O usuario não tem permissão para alterar o video.",
+        "status": 401
+    },
+    "post_invalid_title": {
+        "message": "O titulo do post inserido não é valido.",
+        "status": 400
+    },
+    "post_invalid_description": {
+        "message": "A descrição do post inserido não é valido.",
+        "status": 400
+    },
+    "post_not_found": {
+        "message": "Nenhum post com este id foi encontrado.",
+        "status": 404
+    },
+    "post_permission_denied": {
+        "message": "O usuario não tem permissão para alterar o post.",
+        "status": 401
+    }
+}

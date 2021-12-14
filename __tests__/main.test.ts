@@ -1,0 +1,2 @@
+import "./userTest";
+import "./classTest";
