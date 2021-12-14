@@ -37,6 +37,7 @@
     "dotenv": "^10.0.0",
     "dotenv-cli": "^4.1.1",
     "email-validator": "^2.0.4",
+    "express": "^4.17.1",
     "express-async-error": "^0.0.2",
     "jsonwebtoken": "^8.5.1"
   }
